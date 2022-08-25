@@ -15,6 +15,13 @@ This is how to multi line comment
 - Go over comparitive operator and normal arythmatic ones
 - AND & OR (AND being eval First)
 - IN operator
--  
+- BETWEEN operator
+- Search for coloumns using strings
+- LIKE operator
+- REGEXP ^,$, | and []
+- ORDER BY and DESC etc
+- LIMIT operator
+- INNER JOIN
+- Join more than two tables
 
 \*==================================================*/
