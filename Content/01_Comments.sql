@@ -42,6 +42,27 @@ FROM orders o
 JOIN customers c
 	ON o.customer_id = c.customer_id
 
+- Outer Joins (LEFT and RIGHT)
+-- INNER JOIN (Show present records of orders)
+-- SELECT 
+-- 	c.customer_id,
+--     c.first_name,
+--     o.order_id
+-- FROM customers c
+-- JOIN orders o
+-- 	ON c.customer_id = o.customer_id
+-- ORDER BY c.customer_id
+
+-- OUTER JOIN (Shows all people order or not)
+SELECT 
+	c.customer_id,
+    c.first_name,
+    o.order_id
+FROM orders o 
+RIGHT OUTER JOIN customers c -- (RIGHT join uses right table so customers) (OUTER & INNER are optional)
+	ON c.customer_id = o.customer_id
+ORDER BY c.customer_id
+
 - 
 
 
