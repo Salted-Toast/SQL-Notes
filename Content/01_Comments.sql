@@ -102,13 +102,12 @@ NATURAL JOIN customers c
 SELECT *
 FROM shippers s, products p
 ORDER BY shipper_id
-
 -- Implicit Syntax
 SELECT *
 FROM shippers s
 CROSS JOIN products p
 ORDER BY shipper_id
 
-- 
+- Unions and 
 
 \*==================================================*/
