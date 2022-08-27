@@ -77,6 +77,20 @@ LEFT OUTER JOIN shippers sh
 	ON o.shipper_id = sh.shipper_id
 ORDER BY c.customer_id
 
+- How to simplify join statement utilising USING (MySQL only)
+SELECT
+	o.order_id,
+	c.first_name,
+    s.name AS shipper
+FROM orders o
+LEFT OUTER JOIN customers c
+	-- ON o.customer_id = c.customer_id
+    USING (customer_id)
+LEFT OUTER JOIN shippers s
+	USING (shipper_id)
+ORDER BY o.order_id
+
+- Natural Joins (dont use just for ref)
 
 
 \*==================================================*/
