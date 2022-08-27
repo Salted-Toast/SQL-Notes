@@ -23,6 +23,7 @@ This is how to multi line comment
 - LIMIT operator
 - INNER JOIN
 - Join more than two tables
+- self join
 
 - Composit Primary keys joining with compound join conditions
 SELECT *
@@ -63,7 +64,18 @@ RIGHT OUTER JOIN customers c -- (RIGHT join uses right table so customers) (OUTE
 	ON c.customer_id = o.customer_id
 ORDER BY c.customer_id
 
-- Outer joins with multiple tables
+- Outer joins with multiple tables (Use LEFT JOIN rather than RIGHT, ez to understand)
+SELECT
+	c.customer_id,
+    c.first_name,
+    o.order_id,
+    sh.name AS shipper
+FROM customers c 
+LEFT OUTER JOIN orders o
+	ON c.customer_id = o.customer_id
+LEFT OUTER JOIN shippers sh
+	ON o.shipper_id = sh.shipper_id
+ORDER BY c.customer_id
 
 
 
