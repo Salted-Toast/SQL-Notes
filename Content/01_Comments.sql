@@ -129,6 +129,34 @@ UNION
 SELECT name 
 FROM shippers
 -- Also coloumn will be based from first querie
+-- EXAMPLE of how UNION works
+-- Gold 
+SELECT
+	c.customer_id,
+    c.first_name,
+    c.points,
+    'Gold' AS type
+FROM customers c
+WHERE points >= 3000
+UNION
+-- Silver
+SELECT
+	c.customer_id,
+    c.first_name,
+    c.points,
+    'Silver' AS type
+FROM customers c
+WHERE points >= 2000 AND points < 3000
+UNION
+-- Bronze
+SELECT
+	c.customer_id,
+    c.first_name,
+    c.points,
+    'Bronze' AS type
+FROM customers c
+WHERE points < 2000
+ORDER BY customer_id
 
 
 \*==================================================*/
