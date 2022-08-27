@@ -98,12 +98,19 @@ FROM orders o
 NATURAL JOIN customers c
 
 - Cross Joins (you would only use this say if you had a database of shirts and you wanted to see every size in every colour to figure out if you had a blue shirt in a XL)
+-- This is implicit syntax
 SELECT
 	c.first_name AS customer,
     p.name AS product
 FROM customers c
 CROSS JOIN products p
 ORDER BY customer
+-- This is explicit syntax
+SELECT
+	c.first_name AS customer,
+    p.name AS product
+FROM customers c, orders o
+JOIN products p
 
 - 
 
