@@ -122,5 +122,13 @@ SELECT
     'Archived' AS status
 FROM orders
 WHERE order_date < '2019-01-01'
+-- This will error bc MySQL dk how to do more than one select thing
+SELECT first_name, last_name
+FROM customers
+UNION
+SELECT name 
+FROM shippers
+-- Also coloumn will be based from first querie
+
 
 \*==================================================*/
