@@ -90,7 +90,13 @@ LEFT OUTER JOIN shippers s
 	USING (shipper_id)
 ORDER BY o.order_id
 
-- Natural Joins (dont use just for ref)
+- Natural Joins (dont use just for ref bc it lets the database engine do it for u so could emd up with unexpected errors)
+SELECT
+	o.order_id,
+    c.first_name
+FROM orders o
+NATURAL JOIN customers c
 
+- 
 
 \*==================================================*/
