@@ -63,7 +63,8 @@ RIGHT OUTER JOIN customers c -- (RIGHT join uses right table so customers) (OUTE
 	ON c.customer_id = o.customer_id
 ORDER BY c.customer_id
 
-- 
+- Outer joins with multiple tables
+
 
 
 \*==================================================*/
