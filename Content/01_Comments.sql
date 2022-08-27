@@ -100,13 +100,13 @@ NATURAL JOIN customers c
 - Cross Joins (you would only use this say if you had a database of shirts and you wanted to see every size in every colour to figure out if you had a blue shirt in a XL)
 -- Explicit Syntax
 SELECT *
-FROM shippers, products
+FROM shippers s, products p
 ORDER BY shipper_id
 
 -- Implicit Syntax
 SELECT *
-FROM shippers
-CROSS JOIN products
+FROM shippers s
+CROSS JOIN products p
 ORDER BY shipper_id
 
 - 
