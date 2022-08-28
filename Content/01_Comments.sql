@@ -158,5 +158,24 @@ FROM customers c
 WHERE points < 2000
 ORDER BY customer_id
 
+- Setting datatypes
+VARCHAR(50) - variable character 50 max variable means it will be whatever
+CHAR(50) - will be whatever u put in + whatever to make it 50
+INT(11) - integer, whole num 
+DATE - this is date, its Year-Month-Day or YYYY-MM-DD e.g. 2022-01-25
+
+- Settings under table config
+PK is primary key
+NN is Not Null means that values cannot be null so reqired feilds like customer name
+
+B tells MySQL if its a binary column 
+UN is unsigned datatype
+ZF fills all columns with 0 if its numeric data
+AI is auto incrimental meaning that MySQL will incriment the previous value by one when another entrie is made
+G is Generated column
+Default expression is just whatever it will be set if nothing is put in its place, usually used for NULL/0
+
+
+
 
 \*==================================================*/
