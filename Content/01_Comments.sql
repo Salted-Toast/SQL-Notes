@@ -192,7 +192,6 @@ VALUES (
 INSERT INTO customers (
 	first_name,
     last_name,
-    birth_date,
     address,
     city,
     state)
