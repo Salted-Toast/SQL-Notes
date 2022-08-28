@@ -175,7 +175,35 @@ AI is auto incrimental meaning that MySQL will incriment the previous value by o
 G is Generated column
 Default expression is just whatever it will be set if nothing is put in its place, usually used for NULL/0
 
+- Inserting data using INSER INTO
+-- Without specifying what columns to use
+INSERT INTO customers
+VALUES (
+	DEFAULT,
+    'Salted',
+    'Toast',
+    NULL,
+    DEFAULT,
+    'address',
+    'city',
+    'CA'
+    DEFAULT)
+-- With specifyign what columns to use (order of columns dosent matter just remember to keep the values in the same order as columns)
+INSERT INTO customers (
+	first_name,
+    last_name,
+    birth_date,
+    address,
+    city,
+    state)
+VALUES (
+    'Salted',
+    'Toast',
+    'address',
+    'city',
+    'CA'
+    )
 
-
+- 
 
 \*==================================================*/
