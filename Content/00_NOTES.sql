@@ -1,8 +1,4 @@
--- This is hwo to single line comment
 
-/*
-This is how to multi line comment
-*/
 
 /*==================File=Structure==================*\
 
@@ -291,8 +287,5 @@ WHERE client_id = (
 		WHERE name = 'Myworks'
 )
 -- Still using dynamic statements via the use of subquerys
-
-
-
 
 \*==================================================*/
