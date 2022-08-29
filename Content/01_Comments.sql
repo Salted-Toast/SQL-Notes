@@ -270,6 +270,28 @@ WHERE client_id IN (3, 4)
 -- Leave WHERE blank if you want to update all records
 
 - How to use subquerys in an UPDATE Statement
+USE sql_invoicing;
+-- Use a SELECT statemetn to verify your ammendments
+UPDATE invoices
+SET
+	payment_total = invoice_total * 0.5,
+    payment_date = due_date
+    WHERE client_id IN 
+				(SELECT client_id
+				FROM clients
+				WHERE state IN ('CA', 'NY'))    
+
+                -- The shiz above is now dynamic
+
+- How to delete data using DELETE
+DELETE FROM invoices
+WHERE client_id = (
+		SELECT client_id
+		FROM clients
+		WHERE name = 'Myworks'
+)
+-- Still using dynamic statements via the use of subquerys
+
 
 
 
