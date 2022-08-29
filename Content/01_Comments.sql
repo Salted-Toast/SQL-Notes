@@ -227,9 +227,48 @@ VALUES
 
 - How to copy a table (Note that atributes are not carried over in MySQL)
 CREATE TABLE orders_archived AS 
-SELECT * FROM ordersorders_archived
+SELECT * FROM orders (This select statement being a subquery)
+-- subquery is a statement that is part of another statement
 
-- 
+- How to create a table with a query
+-- Archive invoices 
+-- INNER JOIN with client table 
+-- Only copy invoices that have a payment
+-- Client name, instead of client id
+USE sql_invoicing;
+
+CREATE TABLE invoices_archived AS
+SELECT
+	i.invoice_id,
+    i.number,
+    c.name AS client,
+    i.invoice_total,
+    i.payment_total,
+    i.invoice_date,
+    i.payment_date,
+    i.due_date
+FROM invoices i
+JOIN clients c ON
+	c.client_id = i.client_id
+WHERE i.payment_date IS NOT NULL
+
+- How to update data using UPDATE (Single Rows)
+UPDATE invoices
+SET payment_total = 10, payment_date = '2019-03-01'
+WHERE invoice_id = 1
+-- iF you got it wrong change by doing this below (change contents of prev query)
+UPDATE invoices
+SET payment_total = DEFAULT, payment_date = NULL
+WHERE invoice_id = 1
+
+- How to update multiple rows in a table (Still using UPDATE but making searchterm more general)
+UPDATE invoices
+SET 
+	payment_total = invoice_total * 0.5,
+    payment_date = due_date
+WHERE client_id IN (3, 4)
+-- Leave WHERE blank if you want to update all records
+
 
 
 \*==================================================*/
