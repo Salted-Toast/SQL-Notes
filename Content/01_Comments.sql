@@ -216,8 +216,20 @@ VALUES
     (DEFAULT, 'thin baloons', 295, 0.12),
     (DEFAULT, 'thick baloons', 846, 1.23)
 
-- How to insert data into multiple tables 
+- How to insert data into multiple tables using MySQL func 'LAST_INSERT()' 
+INSERT INTO orders (customer_id, order_date, status)
+VALUES ('1', '2019-01-02', 1);
 
+INSERT INTO order_items
+VALUES
+	(LAST_INSERT_ID(), 1, 1, 2.95),
+	(LAST_INSERT_ID(), 12, 1, 3.95)
+
+- How to copy a table (Note that atributes are not carried over in MySQL)
+CREATE TABLE orders_archived AS 
+SELECT * FROM ordersorders_archived
+
+- 
 
 
 \*==================================================*/
