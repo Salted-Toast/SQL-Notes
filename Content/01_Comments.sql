@@ -209,7 +209,15 @@ VALUES
 	('Shipper1'),
 	('Shipper2'),
 	('Shipper3')
+-- Multiple cells in rows
+INSERT INTO products
+VALUES 
+	(DEFAULT, 'live Chicken', 89, 15.2),
+    (DEFAULT, 'thin baloons', 295, 0.12),
+    (DEFAULT, 'thick baloons', 846, 1.23)
 
-- 
+- How to insert data into multiple tables 
+
+
 
 \*==================================================*/
