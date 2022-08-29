@@ -269,6 +269,8 @@ SET
 WHERE client_id IN (3, 4)
 -- Leave WHERE blank if you want to update all records
 
+- How to use subquerys in an UPDATE Statement
+
 
 
 \*==================================================*/
