@@ -6,8 +6,13 @@ You would use these in where statements
 
 -- OPERATORS --
 
+-- Arythmatic
 +   Add
 -   Minus
+*   Product
+/   Division
+
+-- Comparitive
 =   Equal to
 >   Greater than
 <   Lesser than
