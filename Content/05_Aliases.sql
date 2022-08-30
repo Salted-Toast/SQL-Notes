@@ -15,3 +15,14 @@ SELECT columns
 FROM table alias
 
 \*---------------------------------------*/
+
+USE sql_store;
+
+-- This will allow you to grab selected columns
+-- First one will work without alias
+-- Second one is how u use alias
+SELECT
+    products.name,
+    p.quantity_in_stock
+FROM products p;
+WHERE quantity_in_stock > 10
