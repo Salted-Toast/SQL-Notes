@@ -1,10 +1,10 @@
 /*---------------Operators---------------*\
 
-- Uses -
+-- Uses --
 
 You would use these in where statements
 
-- OPERATORS - 
+-- OPERATORS --
 
 +   Add
 -   Minus

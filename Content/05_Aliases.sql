@@ -21,8 +21,10 @@ USE sql_store;
 -- This will allow you to grab selected columns
 -- First one will work without alias
 -- Second one is how u use alias
+-- Third one will set an alias for the new column that I set
 SELECT
     products.name,
-    p.quantity_in_stock
-FROM products p;
-WHERE quantity_in_stock > 10
+    p.quantity_in_stock,
+    p.unit_price = unit_price * 1.5 AS new_unit_price
+FROM products p
+WHERE quantity_in_stock > 10;

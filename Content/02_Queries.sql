@@ -1,6 +1,6 @@
 /*----------------Queries----------------*\
 
-- SYNTAX -
+-- SYNTAX --
 
 USE         database
 SELECT      columns

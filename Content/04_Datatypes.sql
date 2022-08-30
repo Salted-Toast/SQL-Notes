@@ -1,5 +1,8 @@
 /*---------------Datatypes---------------*\
 
+These datatypes are set within the table configuration
+and apply for the entire row
+
 -- Datatypes --
 
 INT(length)         Integer, whole number
