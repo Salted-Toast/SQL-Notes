@@ -4,7 +4,8 @@ This is to add multiple statements to the
 WHERE clause, AND making it so both have to
 be true for a result to be returned and OR
 being one or the other to be met so a result
-can be returned.
+can be returned. You can also have as many
+ANDs and ORs in a query as you want.
 
 NOT is to return the antithesis of the query
 
