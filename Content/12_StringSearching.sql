@@ -18,7 +18,7 @@ char.
 You can use the ^ symbol to show
 the start of a string, the $ represents the
 end of a string, the | acts as an OR and the
-[] are 
+[] allow you to put in vairable letters
 
 -- SYNTAX --
 
@@ -57,7 +57,21 @@ WHERE name LIKE '__a%'
 
         ---- REGEXP ----
 
--- 
+-- Returns last names that have Twiddell in it
 SELECT *
 FROM customers
-WHERE last_name REGEXP 'feild'
+WHERE last_name REGEXP 'Twiddell'
+-- Returns last names that = Twiddell
+SELECT *
+FROM customers
+WHERE last_name REGEXP '^Twiddell$'
+-- Returns last names that have Twiddell mac rose in it
+SELECT *
+FROM customers
+WHERE last_name REGEXP 'Twiddell|mac|rose'
+-- Returns last names that have ge/ie/me in it
+SELECT *
+FROM customers
+WHERE last_name REGEXP '[gim]e'
+
+
