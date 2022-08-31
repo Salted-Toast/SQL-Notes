@@ -13,9 +13,12 @@ dependent on where you place it. And, it
 has the _ symbol which represents a singular
 char.
 
-REGEXP, you can use the ^ symbol to show
+-- REGEXP --
+
+You can use the ^ symbol to show
 the start of a string, the $ represents the
-end of a string, the | 
+end of a string, the | acts as an OR and the
+[] are 
 
 -- SYNTAX --
 
@@ -33,7 +36,28 @@ WHERE column REGEXP 'content for search'
 
 USE sql_store;
 
--- LIKE --
+        ---- LIKE ----
 
+-- Returns names that are just 'a'
+SELECT *
+FROM customers
+WHERE name LIKE 'a'
+-- Returns names beggining with a
+SELECT *
+FROM customers
+WHERE name LIKE 'a%'
+-- Returns names with an a in it
+SELECT *
+FROM customers
+WHERE name LIKE '%a%'
+-- Returns names where the third letter is = a
+SELECT *
+FROM customers
+WHERE name LIKE '__a%'
 
+        ---- REGEXP ----
 
+-- 
+SELECT *
+FROM customers
+WHERE last_name REGEXP 'feild'
