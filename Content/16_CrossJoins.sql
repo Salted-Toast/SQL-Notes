@@ -1,10 +1,10 @@
 /*--------------Corss-Joins--------------*\
 
-a
+A cross join is where 
 
 -- SYNTAX --
 
 SELECT columns
-FROM table2
+FROM table1
 
 \*---------------------------------------*/
