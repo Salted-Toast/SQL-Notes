@@ -31,8 +31,41 @@ NOTE - 'INNER' is optional, if not specifyed
 SELECT *
 FROM customers c
 INNER JOIN orders o 
-    ON c.customer_id = o.customer_id
+    ON c.customer_id = o.customer_id;
 
--- Join Multiple Tables
+-- Join tables across databases
+-- You only need to prefix the 
+-- table that isnt in use currently
+FROM order_items oi
+JOIN sql_inventory.products p 
+    ON oi.product_id = p.product;
+
+-- Self joins
+USE sql_hr;
+
+-- This will show all rows twice
 SELECT *
-FROM 
+FROM employees e
+JOIN employees m
+    ON e.reports_to = m.employee_id;
+
+-- Join More than two tables
+USE sql_store;
+-- This will contain the contents
+-- From all three tables
+SELECT *
+FROM orders o
+JOIN customers c
+    ON o.customer_id = c.customer_id
+JOIN order_statuses os
+    ON o.status = os.order_status_id;
+
+-- Composit Primary keys joining with
+-- a compound join conditions
+-- Use this when there are no single
+-- joinable columns
+SELECT *
+FROM order_items oi
+JOIN order_item_notes oin
+	ON oi.order_id = oin.order_id
+    AND oi.product_id = oin.product_id;

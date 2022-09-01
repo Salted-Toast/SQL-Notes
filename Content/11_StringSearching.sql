@@ -41,37 +41,37 @@ USE sql_store;
 -- Returns names that are just 'a'
 SELECT *
 FROM customers
-WHERE name LIKE 'a'
+WHERE name LIKE 'a';
 -- Returns names beggining with a
 SELECT *
 FROM customers
-WHERE name LIKE 'a%'
+WHERE name LIKE 'a%';
 -- Returns names with an a in it
 SELECT *
 FROM customers
-WHERE name LIKE '%a%'
+WHERE name LIKE '%a%';
 -- Returns names where the third letter is = a
 SELECT *
 FROM customers
-WHERE name LIKE '__a%'
+WHERE name LIKE '__a%';
 
         ---- REGEXP ----
 
 -- Returns last names that have Twiddell in it
 SELECT *
 FROM customers
-WHERE last_name REGEXP 'Twiddell'
+WHERE last_name REGEXP 'Twiddell';
 -- Returns last names that = Twiddell
 SELECT *
 FROM customers
-WHERE last_name REGEXP '^Twiddell$'
+WHERE last_name REGEXP '^Twiddell$';
 -- Returns last names that have Twiddell mac rose in it
 SELECT *
 FROM customers
-WHERE last_name REGEXP 'Twiddell|mac|rose'
+WHERE last_name REGEXP 'Twiddell|mac|rose';
 -- Returns last names that have ge/ie/me in it
 SELECT *
 FROM customers
-WHERE last_name REGEXP '[gim]e'
+WHERE last_name REGEXP '[gim]e';
 
 

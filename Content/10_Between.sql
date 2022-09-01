@@ -25,4 +25,4 @@ WHERE points >= 1000 AND points <= 3000;
 -- The values set so 1000 and 3000
 SELECT*
 FROM customers
-WHERE points BETWEEN 1000 AND 3000
+WHERE points BETWEEN 1000 AND 3000;

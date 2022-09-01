@@ -32,7 +32,7 @@ USE sql_store;
 -- reverse order from customer_id
 SELECT *
 FROM customers
-ORDER BY customer_id DESC
+ORDER BY customer_id DESC;
 
 -- Returns data from customers based
 -- upon what state they live in. If
@@ -41,4 +41,4 @@ ORDER BY customer_id DESC
 -- first in alphabetical order
 SELECT *
 FROM customer
-ORDER BY state, first_name
+ORDER BY state, first_name;
