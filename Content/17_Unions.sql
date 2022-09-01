@@ -53,4 +53,4 @@ SELECT
     'Bronze' AS type
 FROM customers c
 WHERE points < 2000
-ORDER BY customer_id
+ORDER BY customer_id;

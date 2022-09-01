@@ -1,6 +1,6 @@
 /*------------Updating-Data--------------*\
 
-a
+How to update tables data using UPDATE
 
 -- SYNTAX --
 
